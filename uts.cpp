@@ -117,20 +117,32 @@ class Transaksi{
         }
 
         void tampilkanTransaksi(){
-            system("cls");
-            cout << "===========================================================" << endl;
-            cout << "                       STRUK PEMBELIAN" << endl;
-            cout << "                      RESTORAN KUY COBA" << endl;
-            cout << "           Jl. Ambarawa Barat Nomor 53 Ciamis, Jawa Barat" << endl;
-            cout << "===========================================================" << endl;
-            cout << "Nama Pembeli   : " << this->namaPembeli << endl;
-            cout << "Jumlah Pesanan : " << this->jumlah << endl;
-            for(int i = 0; i < this->jumlah; i++){
-                cout << "Paket Makanan  : " << this->NamaPaket[i] << endl;
-                cout << "Harga Paket    : Rp" << this->harga[i] << endl << endl;
-            }
-            cout << "===========================================================" << endl;
-            cout << "Total Pembayaran   : Rp" << this->total << endl;
+            double uang;
+            do{
+                system("cls");
+                cout << "===========================================================" << endl;
+                cout << "                       STRUK PEMBELIAN" << endl;
+                cout << "                      RESTORAN KUY COBA" << endl;
+                cout << "           Jl. Ambarawa Barat Nomor 53 Ciamis, Jawa Barat" << endl;
+                cout << "===========================================================" << endl;
+                cout << "Nama Pembeli   : " << this->namaPembeli << endl;
+                cout << "Jumlah Pesanan : " << this->jumlah << endl;
+                for(int i = 0; i < this->jumlah; i++){
+                    cout << "Paket Makanan  : " << this->NamaPaket[i] << endl;
+                    cout << "Harga Paket    : Rp" << this->harga[i] << endl << endl;
+                }
+                cout << "===========================================================" << endl;
+                cout << "Total Pembayaran   : Rp" << this->total << endl;
+                cout << "Masukkan Uang Anda : Rp";
+                cin >> uang;
+                if(uang < this->total){
+                    cout << "Uang Anda Kurang" << endl;
+                    sleep(2);
+                }
+                else{
+                    cout << "Kembalian Anda     : Rp" << uang - this->total << endl;
+                }
+            }while(uang < this->total);
             cout << "===========================================================" << endl;
             cout << "                 Terima Kasih Atas Kunjungannya" << endl;
         }
