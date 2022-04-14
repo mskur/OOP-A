@@ -136,7 +136,7 @@ class Transaksi{
                 cout << "Masukkan Uang Anda : Rp";
                 cin >> uang;
                 if(uang < this->total){
-                    cout << "Uang Anda Kurang" << endl;
+                    cout << "Mohon Maaf Uang Anda Kurang Rp" << this->total-uang << endl;
                     sleep(2);
                 }
                 else{
