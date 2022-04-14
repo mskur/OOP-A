@@ -172,7 +172,7 @@ int main(){
         cout << "NPM   : 20081010074" << endl;
         cout << "Kelas : Pemrograman Berorientasi Objek A" << endl << endl;
         cout << "===========================================================" << endl;
-        cout << "                        RESTORAN YUK COBA"<<endl;
+        cout << "                        RESTORAN KUY COBA"<<endl;
         cout << "============================================================" <<endl;
         cout << "1. Lihat Paket Menu"<<endl;
         cout << "2. Update Paket Menu"<<endl;
